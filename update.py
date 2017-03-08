@@ -2,11 +2,8 @@
 
 import os
 import sys
-import urllib2
 from urllib2 import urlopen, URLError, HTTPError
 from BeautifulSoup import BeautifulSoup
-from StringIO import StringIO
-from io import BytesIO
 
 CURRENT_VERSIONS = "https://help.ubnt.com/hc/en-us/articles/115000441548-UniFi-Current-Controller-Versions"
 DOWNLOAD_BASEURL = "https://www.ubnt.com/downloads/unifi/%%VER%%/UniFi.unix.zip"
@@ -29,7 +26,7 @@ def getVersions (releases):
   # Request the current versions page from UBNT, looking for the branches/releases in "REQUESTED_RELEASES"
   versions = {}
   url = CURRENT_VERSIONS
-  html_page = urllib2.urlopen(url)
+  html_page = urlopen(url)
   soup = BeautifulSoup(html_page)
   for rel in releases:
     # Look through the HTML table and find the rows containing the desired branches/releases
