@@ -3,8 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to ubnt-unifi-diy's documentation!
-==========================================
+.. Welcome to ubnt-unifi-diy's documentation!
+
+UBNT UniFi Controller - DIY Package Updater
+===========================================
 
 .. toctree::
    :maxdepth: 2
