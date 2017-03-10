@@ -11,6 +11,8 @@ UBNT UniFi Controller - DIY Package Updater
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   license
+   help
 
 What does it do?
 -------------------
@@ -30,11 +32,9 @@ Why?
 
 Because it is tedious to do this manually for each release cycle, and if you're a good SE like me, you're always looking for ways to offload tedius tasks to machines. They happen to be quite good at repetitive, tedious tasks and are also content to do so.
 
-
 Indices and tables
 ==================
 
 * :ref:`genindex`
 .. * :ref:`modindex`
 * :ref:`search`
-* :ref:`license`
