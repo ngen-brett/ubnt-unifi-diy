@@ -1,0 +1,3 @@
+BeautifulSoup==3.2.1
+better-exceptions==0.1.8
+urllib2==1498656401.94
