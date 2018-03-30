@@ -29,13 +29,22 @@ def getVersions (releases):
   for rel in releases:
     # Look through the HTML table and find the rows containing the desired branches/releases
     for tr in soup.findAll('tr'):
-      spans = tr.findAll('span')
-      for span in spans:
-        if span.string and rel in span.string and span.string not in EXCLUDE_RELEASES:
+      ### Deprecated HTML structure ###
+      #spans = tr.findAll('span')
+      #for span in spans:
+      #  if span.string and rel in span.string and span.string not in EXCLUDE_RELEASES:
+          # If the branch/release string matches, and isn't in the exclude list, grab the label from the HREF in that row.
+          # This text string is the version number we use to build the download link for the DIY tarball.
+      #    for link in tr.findAll('a'):
+      #      versions[span.string] = link.string
+      ### New structure as of 3/30/2018 ###
+      tds = tr.findAll('td')
+      for td in tds:
+        if td.string and rel in td.string and td.string not in EXCLUDE_RELEASES:
           # If the branch/release string matches, and isn't in the exclude list, grab the label from the HREF in that row.
           # This text string is the version number we use to build the download link for the DIY tarball.
           for link in tr.findAll('a'):
-            versions[span.string] = link.string
+            versions[td.string] = link.string
   return versions
 
 def downloadVersion (rel, releases):
