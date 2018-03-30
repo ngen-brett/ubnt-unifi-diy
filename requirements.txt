@@ -1,1 +1,6 @@
 BeautifulSoup==3.2.1
+<<<<<<< HEAD
+=======
+better-exceptions==0.1.8
+urllib2==1498656401.94
+>>>>>>> 3967605b5e664d6619ac20d9de661f5ad2b42155

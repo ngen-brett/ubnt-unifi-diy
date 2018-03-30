@@ -1,5 +1,3 @@
-#!/usr/local/bin/python2
-
 import os
 import sys
 from urllib2 import urlopen, URLError, HTTPError
